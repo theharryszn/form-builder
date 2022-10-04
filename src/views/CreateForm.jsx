@@ -39,8 +39,8 @@ const CreateForm = () => {
         </div>
         <p>
           To create a new form, add a title and click{" "}
-          <span className='font-medium'>Add Questions</span> to add questions to
-          your form . Once saved a url will be generated that can be shared.
+          <span className='font-medium'>Insert Questions</span> to add questions
+          to your form . Once saved a url will be generated that can be shared.
         </p>
         <div>
           <input
