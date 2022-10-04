@@ -30,7 +30,10 @@ const Login = () => {
             />
           </div>
           <div className='flex flex-col space-y-2'>
-            <button className='p-4 bg-indigo-600 text-white font-medium rounded-md min-w-[24rem] outline-indigo-400'>
+            <button
+              type='submit'
+              className='p-4 bg-indigo-600 text-white font-medium rounded-md min-w-[24rem] outline-indigo-400'
+            >
               Login
             </button>
           </div>

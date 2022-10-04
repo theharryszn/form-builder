@@ -5,15 +5,7 @@ import { Link } from "react-router-dom";
 const Welcome = () => {
   return (
     <main>
-      {/* <div className='glass flex items-center p-10'>
-              <div className='font-medium text-indigo-600 text-lg flex space-x-6 items-center'>
-                  <div className='w-6 h-6 bg-indigo-600 rounded-full'></div>
-                  <span>
-                  Form Builder
-                  </span>
-              </div>
-          </div> */}
-      <div className='max-w-[94rem] mx-auto p-10 flex flex-col items-start space-y-10'>
+      <div className='max-w-[90rem] mx-auto p-10 flex flex-col items-start space-y-10'>
         <div className='flex items-center justify-between w-full'>
           <div className='font-medium text-xl'>Welcome, Harry</div>
           <Link
