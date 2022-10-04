@@ -1,11 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <div className='grid grid-cols-2 w-screen h-screen'>
-      <div className='bg-indigo-600 col-span-1'>
-      </div>
+      <div className='bg-indigo-600 col-span-1'></div>
       <div className='col-span-1 flex items-center justify-center'>
         <form className='flex flex-col items-center space-y-6'>
           <div className='flex flex-col items-center justify-center space-y-4'>
@@ -13,22 +12,38 @@ const Login = () => {
             <p>Login now to access you forms.</p>
           </div>
           <div className='flex flex-col space-y-2'>
-            <input type="password" placeholder='Email Address' name='email' id='email' className='p-4 bg-indigo-50 rounded-md min-w-[24rem] outline-indigo-400'/>
+            <input
+              type='password'
+              placeholder='Email Address'
+              name='email'
+              id='email'
+              className='p-4 bg-indigo-50 rounded-md min-w-[24rem] outline-indigo-400'
+            />
           </div>
           <div className='flex flex-col space-y-2'>
-            <input type="password" placeholder='Password' name='email' id='email' className='p-4 bg-indigo-50 rounded-md min-w-[24rem] outline-indigo-400'/>
+            <input
+              type='password'
+              placeholder='Password'
+              name='email'
+              id='email'
+              className='p-4 bg-indigo-50 rounded-md min-w-[24rem] outline-indigo-400'
+            />
           </div>
           <div className='flex flex-col space-y-2'>
-            <button className='p-4 bg-indigo-600 text-white font-medium rounded-md min-w-[24rem] outline-indigo-400'>Login</button>
+            <button className='p-4 bg-indigo-600 text-white font-medium rounded-md min-w-[24rem] outline-indigo-400'>
+              Login
+            </button>
           </div>
           <div className='flex flex-col space-y-2 items-center'>
             <p>Don't have an account?</p>
-            <Link to="/create-account" className='text-indigo-600 font-medium'>Create an account</Link>
+            <Link to='/create-account' className='text-indigo-600 font-medium'>
+              Create an account
+            </Link>
           </div>
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
