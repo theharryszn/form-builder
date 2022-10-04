@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import { v4 as uuid } from "uuid";
+import React from "react";
 
-const Question = ({ type, caption, options }) => {
-  const id = useState(uuid())[0];
+const Question = ({ id, type, caption, options }) => {
   return (
     <div className='bg-indigo-50 p-4 rounded-md w-full'>
       <div className='p-4 font-medium text-xl'>{caption}</div>

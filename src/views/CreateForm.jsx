@@ -3,10 +3,11 @@ import React, { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
 import Question from "../components/Question";
+import { v4 as uuid } from "uuid";
 
 const CreateForm = () => {
   const [questions, setQuestions] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [newQuestion, setNewQuestion] = useState({
     caption: "",
     type: "text",
@@ -17,6 +18,7 @@ const CreateForm = () => {
     setQuestions([...questions, newQuestion]);
     setIsModalOpen(false);
     setNewQuestion({
+      id: uuid(),
       caption: "",
       type: "",
       options: [],
