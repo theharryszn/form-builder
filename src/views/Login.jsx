@@ -9,7 +9,7 @@ const Login = () => {
         <form className='flex flex-col items-center space-y-6'>
           <div className='flex flex-col items-center justify-center space-y-4'>
             <h1 className='text-3xl font-bold smm:text-4xl'>Hello again!</h1>
-            <p>Login now to access you forms.</p>
+            <p>Login now to access your forms.</p>
           </div>
           <div className='flex flex-col space-y-2'>
             <input
