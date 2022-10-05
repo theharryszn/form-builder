@@ -27,12 +27,12 @@ const Login = () => {
               replace: true,
             });
           } else {
-            setError("An error occured");
+            setError(res.data.status);
           }
         })
         .catch((err) => {
           setLoading(false);
-          setError(err.message);
+          setError("Invalid Credentials");
         });
     },
     [credentials, navigate]

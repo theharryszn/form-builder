@@ -10,7 +10,7 @@ const CreateForm = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newQuestion, setNewQuestion] = useState({
     caption: "",
-    type: "text",
+    answerType: "TEXT",
     options: [],
   });
 
@@ -20,7 +20,7 @@ const CreateForm = () => {
     setNewQuestion({
       id: uuid(),
       caption: "",
-      type: "text",
+      answerType: "TEXT",
       options: [],
     });
   }, [newQuestion, questions]);
@@ -102,9 +102,9 @@ const CreateForm = () => {
                 id='type'
                 className='p-4 bg-indigo-50 rounded-md min-w-[24rem] outline-indigo-400 w-full'
               >
-                <option value='text'>Text</option>
-                <option value='radio'>Multi-Choice</option>
-                <option value='checkbox'>Checkbox</option>
+                <option value='TEXT'>Text</option>
+                <option value='RADIO'>Multi-Choice</option>
+                <option value='CHECKBOX'>Checkbox</option>
               </select>
               <div>
                 <ResolveType
@@ -127,7 +127,7 @@ const CreateForm = () => {
 };
 
 const ResolveType = ({ newQuestion, setNewQuestion }) => {
-  if (newQuestion.type === "radio" || newQuestion.type === "checkbox") {
+  if (newQuestion.type === "RADIO" || newQuestion.type === "CHECKBOX") {
     return (
       <div className='flex flex-col space-y-3 '>
         <label htmlFor='type' className='text-sm font-medium text-indigo-900'>
