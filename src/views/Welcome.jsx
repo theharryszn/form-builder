@@ -27,7 +27,8 @@ const Welcome = () => {
         replace: true,
       });
     }
-  }, []);
+  }, [navigate]);
+
   return (
     <main>
       <div className='max-w-[90rem] mx-auto p-10 flex flex-col items-start space-y-10'>
