@@ -20,7 +20,7 @@ const CreateForm = () => {
     setNewQuestion({
       id: uuid(),
       caption: "",
-      type: "",
+      type: "text",
       options: [],
     });
   }, [newQuestion, questions]);
@@ -133,7 +133,7 @@ const ResolveType = ({ newQuestion, setNewQuestion }) => {
         <label htmlFor='type' className='text-sm font-medium text-indigo-900'>
           Options
         </label>
-        <div className='p-4 bg-indigo-50 rounded-md flex items-center gap-2 flex-wrap'>
+        <div className='p-4 bg-indigo-50 rounded-md flex items-start gap-2 flex-wrap'>
           {newQuestion.options.map((option, i) => {
             return (
               <span key={i} className='p-1 bg-indigo-100 rounded-md'>
@@ -141,7 +141,7 @@ const ResolveType = ({ newQuestion, setNewQuestion }) => {
               </span>
             );
           })}
-          <input
+          <textarea
             type='text'
             onKeyDown={(e) => {
               if (e.target.value.trim().length > 0) {
@@ -164,9 +164,10 @@ const ResolveType = ({ newQuestion, setNewQuestion }) => {
                 }
               }
             }}
-            className='bg-transparent outline-none'
+            className='bg-transparent outline-none resize-none p-1'
+            rows={2}
             placeholder={`Option ${newQuestion.options.length + 1}`}
-          />
+          ></textarea>
         </div>
         <p className='text-sm p-2 text-indigo-900 font-medium'>
           Click enter to add
