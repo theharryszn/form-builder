@@ -69,7 +69,7 @@ const CreateAccount = () => {
           </div>
           <div className='flex flex-col space-y-2'>
             <input
-              type='password'
+              type='email'
               placeholder='Email Address'
               name='email'
               id='email'
